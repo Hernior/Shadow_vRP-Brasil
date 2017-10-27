@@ -8,3 +8,4 @@ Sighmir: Pelas scripts - https://github.com/Sighmir
 Imagic: Pela base - https://github.com/ImagicTheCat  
 Shadow e Anark: Pela edição do Servidor.  
 **************************************************************************************************************************************
+Contato: [FiveM Dev - Brasil](https://discord.gg/QHT9dVz)
