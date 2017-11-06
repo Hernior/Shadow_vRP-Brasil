@@ -123,10 +123,10 @@ function vRP.openSkinshop(source,parts)
 
           if vRP.tryPayment(user_id,price) then
             if price > 0 then
-              vRPclient.notify(source,{lang.money.paid({price})})
+              TriggerClientEvent("pNotify:SendNotification",player,{text = "Pagou <span color='red'>" ..price.. "R$</span>", type = "success", timeout = math.random(1000, 10000),layout = "centerLeft"})
             end
           else
-            vRPclient.notify(source,{lang.money.not_enough()})
+            TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Você não tem dinheiro suficiente</span>", type = "error", timeout = math.random(1000, 10000),layout = "centerLeft"})
             -- revert changes
             vRPclient.setCustomization(source,{old_custom})
           end

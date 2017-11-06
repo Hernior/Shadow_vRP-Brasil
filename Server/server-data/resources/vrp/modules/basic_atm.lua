@@ -25,13 +25,13 @@ local function atm_choice_deposit(player,choice)
       local user_id = vRP.getUserId(source)
       if user_id ~= nil then
         if vRP.tryDeposit(user_id,v) then
-          vRPclient.notify(source,{lang.atm.deposit.deposited({v})})
+          TriggerClientEvent("pNotify:SendNotification",player,{text = "Depositado <span color='red'>" ..v.. "R$</span> ", type = "info", timeout = math.random(1000, 10000),layout = "centerLeft"})
         else
-          vRPclient.notify(source,{lang.money.not_enough()})
+          TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Você não tem dinheiro suficiente</span>", type = "error", timeout = math.random(1000, 10000),layout = "centerLeft"})
         end
       end
     else
-      vRPclient.notify(source,{lang.common.invalid_value()})
+      TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Valor inválido</span>", type = "error", timeout = math.random(1000, 10000),layout = "centerLeft"})
     end
   end)
 end
@@ -48,13 +48,13 @@ local function atm_choice_withdraw(player,choice)
       local user_id = vRP.getUserId(source)
       if user_id ~= nil then
         if vRP.tryWithdraw(user_id,v) then
-          vRPclient.notify(source,{lang.atm.withdraw.withdrawn({v})})
+          TriggerClientEvent("pNotify:SendNotification",player,{text = "Retirado <span color='red'>" ..v.. "R$</span> ", type = "info", timeout = math.random(1000, 10000),layout = "centerLeft"})
         else
-          vRPclient.notify(source,{lang.atm.withdraw.not_enough()})
+          TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Você não tem dinheiro suficiente no banco</span>", type = "error", timeout = math.random(1000, 10000),layout = "centerLeft"})
         end
       end
     else
-      vRPclient.notify(source,{lang.common.invalid_value()})
+      TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Valor inválido</span>", type = "error", timeout = math.random(1000, 10000),layout = "centerLeft"})
     end
   end)
 end

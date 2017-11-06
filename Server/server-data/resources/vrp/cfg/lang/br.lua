@@ -3,7 +3,7 @@
 
 local lang = {
   common = {
-    welcome = "Bem vindo. Use a tecla F7 para usar o menu de Interação de Jogador.",
+    welcome = "Bem vindo. Use a tecla K para usar o menu de Interação de Jogador.",
     no_player_near = "~r~Nenhum jogador perto de você.",
     invalid_value = "~r~Valor inválido.",
     invalid_name = "~r~Nome inválido.",

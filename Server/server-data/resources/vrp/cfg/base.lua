@@ -6,7 +6,7 @@ cfg.db = {
   host = "127.0.0.1:3306",
   database = "vRP",
   user = "root",
-  password = ""
+  password = "root"
 }
 
 cfg.save_interval = 10 -- seconds

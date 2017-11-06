@@ -18,7 +18,7 @@ cfg.garage_types = {
   },
   
   ["pm"] = {
-    _config = {vtype="car",blipcolor=4,permissions={"pm.garagem"}},
+    _config = {vtype="car",blipcolor=4,permissions={"pm2.garagem"}},
     ["police"] = {"Police Car",0, ""},
 	["police3"] = {"Police Car3",0, ""},
 	["police2"] = {"Police Car2",0, ""},

@@ -45,7 +45,7 @@ items["money_binder"] = {"Money binder","Used to bind 1000$ of money.",function(
           vRP.closeMenu(player)
         end
       else
-        vRPclient.notify(player,{vRP.lang.money.not_enough()})
+        TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Você não tem dinheiro suficiente</span>", type = "error", timeout = math.random(1000, 10000),layout = "centerLeft"})
       end
     end
   end}

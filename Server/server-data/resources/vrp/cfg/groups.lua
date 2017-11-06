@@ -86,7 +86,7 @@ cfg.groups = {
     "police.menu",
     "police.cloakroom",
     "police.pc",
-	"pm.garagem",
+	"pm2.garagem",
     "police.handcuff",
     "police.putinveh",
     "police.getoutveh",

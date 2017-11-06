@@ -141,10 +141,10 @@ function vRPbs.openBarbershop(source,parts)
 		  --print(price)
           if vRP.tryPayment({user_id,price}) then
             if price > 0 then
-              vRPclient.notify(player,{lang.money.paid({price})})
+              TriggerClientEvent("pNotify:SendNotification",player,{text = "Pagou <span color='red'>" ..price.. "R$</span>", type = "success", timeout = math.random(1000, 10000),layout = "centerLeft"})
             end
           else
-            vRPclient.notify(player,{lang.money.not_enough()})
+            TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Você não tem dinheiro suficiente</span>", type = "error", timeout = math.random(1000, 10000),layout = "centerLeft"})
             -- revert changes
             vRPbsC.setOverlay(player,{old_custom,false}) --custom {id,ct,c1}
           end
