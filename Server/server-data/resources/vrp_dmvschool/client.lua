@@ -185,7 +185,7 @@ function SpawnTestCar()
 	Citizen.Wait(0)
 	local myPed = GetPlayerPed(-1)
 	local player = PlayerId()
-	local vehicle = GetHashKey('prius')
+	local vehicle = GetHashKey('blista')
 
     RequestModel(vehicle)
 
