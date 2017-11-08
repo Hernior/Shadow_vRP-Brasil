@@ -51,7 +51,7 @@ AddEventHandler("vRP:playerSpawn", function(user_id, source, first_spawn)
     end
 
     -- notify last login
-    TriggerClientEvent("pNotify:SendNotification",player,{text = "<b style='color:orange'>Bem vindo. Pressione K para acessar o menu do jogador.</b>", type = "warning", timeout = math.random(1000, 10000),layout = "centerLeft"})
+    TriggerClientEvent("pNotify:SendNotification",player,{text = "<b style='color:LightSkyBlue'>Bem vindo. Pressione K para acessar o menu do jogador.</b>", type = "info", timeout = math.random(1000, 10000),layout = "centerLeft"})
   else -- not first spawn (player died), don't load weapons, empty wallet, empty inventory
     vRP.setHunger(user_id,0)
     vRP.setThirst(user_id,0)
