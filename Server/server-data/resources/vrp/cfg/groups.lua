@@ -100,6 +100,8 @@ cfg.groups = {
     "police.announce",
 	"police.askid",
 	"pm.paycheck",
+	"mission.police.transfer",
+    "mission.police.patrol",
 	"police.weapons",
     "-police.store_weapons",
     "-police.seizable" -- negative permission, police can't seize itself, even if another group add the permission
