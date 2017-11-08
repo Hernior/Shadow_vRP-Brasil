@@ -12,7 +12,7 @@ local cfg = {}
 
 cfg.tattoos = {
 	["mpbeach_overlays"] = { -- native store name
-		_config = {blipid=152,blipcolor=8,title="Beach Tattoos"}, -- you can add permissions like on other vRP features
+		_config = {blipid=75,blipcolor=48,title="Beach Tattoos"}, -- you can add permissions like on other vRP features
 		["CLEAR"] = {">Clear Tattoos",500,""},
 		["MP_Bea_M_Head_000"] = {"Head Tattoo 1",500,""},
 		["MP_Bea_M_Head_001"] = {"Head Tattoo 2",500,""},
@@ -47,7 +47,7 @@ cfg.tattoos = {
 		["MP_Bea_F_RLeg_000"] = {"Right Leg Tattoo",500,""}
 	},
 	["mpbusiness_overlays"] = {
-		_config = {blipid=152,blipcolor=8,title="Business Tattoos"},
+		_config = {blipid=75,blipcolor=48,title="Business Tattoos"},
 		["CLEAR"] = {">Clear Tattoos",500,""},
 		["MP_Buis_M_Neck_000"] = {"Neck Tattoo 1",500,""},
 		["MP_Buis_M_Neck_001"] = {"Neck Tattoo 2",500,""},
@@ -79,7 +79,7 @@ cfg.tattoos = {
 	},
 
 	["mphipster_overlays"] = {
-		_config = {blipid=152,blipcolor=8,title="Hipster Tattoos"},
+		_config = {blipid=75,blipcolor=48,title="Hipster Tattoos"},
 		["CLEAR"] = {">Clear Tattoos",500,""},
 		["FM_Hip_M_Tat_000"] = {"Hipster Tattoo 1",500,""},
 		["FM_Hip_M_Tat_001"] = {"Hipster Tattoo 2",500,""},

@@ -63,7 +63,7 @@ for shop,tattoos in pairs(cfg.tattoos) do
         -- get player tattoos to not rebuy
 		vRP.getUData({user_id,"vRP:tattoos",function(value)
 		  local tattoos = json.decode(value)
-		  if tattos ~= nil then
+		  if tattoos ~= nil then
 		    for k,v in pairs(tattoos) do
 		      if k == tattoo then
 			    owned = true
