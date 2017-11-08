@@ -1,3 +1,4 @@
+
 window.addEventListener("load",function(){
   errdiv = document.createElement("div");
   if(true){ //debug
@@ -7,11 +8,6 @@ window.addEventListener("load",function(){
         errdiv.innerHTML += '<br />Error: ' + errorMsg + ' Script: ' + url + ' Line: ' + lineNumber
                 + ' Column: ' + column + ' StackTrace: ' +  errorObj;
     }
-  }
-
-  log = function(txt)
-  {
-    errdiv.innerHTML += "<br />log: "+txt;
   }
 
   //init dynamic menu
@@ -46,12 +42,6 @@ window.addEventListener("load",function(){
 
     if(data.act == "cfg"){
       cfg = data.cfg
-    }
-    else if(data.act == "pause_change"){
-      if(data.paused)
-        $(document.body).hide();
-      else
-        $(document.body).show();
     }
     else if(data.act == "open_menu"){ //OPEN DYNAMIC MENU
       current_menu.close();

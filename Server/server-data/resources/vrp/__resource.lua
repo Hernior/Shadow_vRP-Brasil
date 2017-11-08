@@ -68,5 +68,11 @@ files{
   "gui/RequestManager.js",
   "gui/AnnounceManager.js",
   "gui/Div.js",
-  "gui/dynamic_classes.js"
+  "gui/dynamic_classes.js",
+  "gui/img/blue.jpg",
+  "gui/img/border.png",
+  "gui/img/menu.png",
+  "gui/img/red.jpg",
+  "gui/img/grey.jpg",
+  "gui/img/code.jpg"
 }
