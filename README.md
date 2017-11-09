@@ -1,10 +1,21 @@
-# FiveM Server vRP Brasil  
-Galera depois de muitas brigas na comunidade Brasileira do FiveM eu(Shadow) e o Anark decidimos colocar o Server que eu e ele criamos para download.  
-Obrigado a todos e por favor não tente ganhar dinheiro em cima desse servidor.  
-**************************************************************************************************************************************
-Créditos:  
-Sighmir: Pelas scripts - https://github.com/Sighmir  
-Imagic: Pela base - https://github.com/ImagicTheCat  
-Shadow e Anark: Pela edição do Servidor.  
-**************************************************************************************************************************************
-Contato: [FiveM Dev - Brasil](https://discord.gg/QHT9dVz)
+sRP
+
+Bem-vindo ao Shadow vRP.
+
+Discord
+
+Se precisar de ajuda, entre no meu Discord: https://discord.gg/QHT9dVz
+
+Instalação
+
+Extraia o Server no desktop
+
+Vá na pasta server-data e lá estará o run.
+
+Vá para vrp / cfg / base.lua e insira os detalhes do seu banco de dados, você também pode selecionar seu idioma aqui.
+
+Vá para server.cfg e insira os detalhes do banco de dados.
+
+Atualizações
+
+Estarei sempre atualizando a base corrigindo bugs e adicionando coisas novas.
