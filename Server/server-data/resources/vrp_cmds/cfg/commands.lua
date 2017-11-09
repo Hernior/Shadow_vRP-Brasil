@@ -250,14 +250,6 @@ cfg.commands = {
 	  end
 	end
   },
-  ["/ajuda"] = {
-    -- /pos to log postion to file with user name and msg
-    action = function(p,color,msg) 
-        TriggerClientEvent("pNotify:SetQueueMax",p,"global", 8)
-
-                TriggerClientEvent("pNotify:SendNotification",p,{text = "<b style='color:orange'>Pressione K para acessar o menu do jogador.</b> ", type = "warning", timeout = math.random(1000, 10000),layout = "centerLeft",sounds = {volume = 1.0,sources = {"sound-example.wav"}}})
-    end
-  },
   ["/discord"] = {
     -- /pos to log postion to file with user name and msg
     action = function(p,color,msg) 
