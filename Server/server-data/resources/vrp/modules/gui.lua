@@ -41,6 +41,7 @@ function vRP.openMenu(source,menudef)
 
   -- openmenu
   vRPclient.openMenuData(source,{menudata})
+  vRPclient.playAnim(source,{false,{task="world_human_stand_mobile"},false})
 end
 
 -- force close player menu
@@ -159,6 +160,7 @@ end
 function tvRP.closeMenu(id)
   local menu = client_menus[id]
   if menu and menu.source == source then
+  vRPclient.stopAnim(source,{false})
 
     -- call callback
     if menu.def.onclose then

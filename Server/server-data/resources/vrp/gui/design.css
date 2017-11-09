@@ -12,58 +12,50 @@ html, body {
 
 .console{
   background-color: white;
-  color: red;
+  color: green;
   font-weight: bold;
 }
 
 /* menu */
 
-.menu{ 
-  background-image: url("img/grey.jpg"); /*Change the phone wallpaper here. You can use 'grey.jpg' 'red.jpg' 'code.jpg' 'blue.jpg' or add you own in gui/img/--> [Make sure to resize the pic so that the hight is 401px!] */
-  font-family: 'Roboto', sans-serif; 
-  color: white;
-  width: 200px;
-  height: 401px;
-  font-size: 9px;
-  text-align: center;
-  margin-left: 80%;
-  margin-top: 22%;
+.menu{
+  background-color: rgba(35, 40, 46, 0.5);
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+  width: 250px;
+  height: 50%;
   position: absolute;
   float: left;
-  border-style: solid; 
-  border-width: 30px 9px 1px 9px; 
-  border-image: url(img/menu.png) 30 9 1 9;
-  border-radius: 32px 32px 0px 0px;
-  box-shadow: -1px -1px 60px 0px rgba(0,0,0,1);
- }
+  font-weight: bold;
+  border-radius: 7px 7px 7px 7px;
+ -moz-border-radius: 7px 7px 7px 7px;
+ -webkit-border-radius: 7px 7px 7px 7px;
+  border: 0px solid #000000;
+}
 
 .menu_description{
-  border-radius: 0px 0px 4px 4px;
-  box-shadow: inset -1px -1px 60px 0px rgba(0,0,0,1);
-  box-shadow: -1px -1px 60px 0px rgba(0,0,0,1);
   background-color: rgba(35, 40, 46, 0.5);
-  font-family: 'Unica One', cursive;
-  color: white;
-  float: left;
-  margin-left: 41%;
-  position: static;
+  border-radius: 0px 10px 10px 0px;
+ -moz-border-radius: 0px 10px 10px 0px;
+ -webkit-border-radius: 0px 10px 10px 0px;
+  border: 0px solid #000000;
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+  position: absolute;
   font-weight: bold;
   padding: 9px;
-  font-size: 1.2em;
+  font-size: 1.0em;
   max-width: 500px;
-  max-height: 200px;
 }
 
 .menu h1{
-  background-color: rgb(44, 189, 247);
-  font-family: 'Unica One', cursive;
+  background-color: rgba(255,0,0,0.75);
+  font-family: "Comic Sans MS", cursive, sans-serif;
   color: white;
-  text-transform: uppercase;
   text-align: center;
   font-size: 1.6em;
   padding: 6px;
-  border: 1px solid #000000;
-  box-shadow: inset -1px -1px 60px 0px rgba(0,0,0,1);
+  font-weight: bold;
 }
 
 .choices{
@@ -76,29 +68,19 @@ html, body {
 }
 
 .choices div{
-  padding: 8px;
-  border: 1px solid #000000;
-  font-size: 15px;
+  padding: 6px;
+  font-size: 1.3em;
 }
-/*
-Blue------------------>"background-color: rgba(0, 182, 255,0.90);"
-Grey------------------>"background-color: rgba(96, 92, 92,0.90);"
-RED------------------> "background-color: rgba(175, 24, 24,0.90);"
-Code------------------>"background-color: rgba(58, 160, 53,0.90);"
-*/
+
 .choices .selected{
-  background-color: rgba(0, 182, 255,0.90);      /*<<<<<<<<<<<---------------Put it on this line!*/
+  background-color: rgba(255,255,255,0.90);
   color: black;
-  box-shadow: inset -1px 2px 19px 0px rgba(0,0,0,1);
 }
 
 /* progress bar */
 .progressbar{
-  border-radius: 2px 2px 2px 2px;
   position: absolute;
-  box-shadow: 3px 6px 29px 3px rgba(0,0,0,1);
-  border: 2px solid rgb(0, 182, 255);
-  }
+}
 
 .progressbar .inner{
 }
@@ -106,38 +88,46 @@ Code------------------>"background-color: rgba(58, 160, 53,0.90);"
 .progressbar .label{
   position: absolute;
   color: white;
-  font-family: 'Unica One', cursive;
+  font-weight: bold;
   text-align: center;
+  text-shadow: 2px 2px black;
 }
 
 /* wprompt */
 .wprompt{
   position: absolute;
-  background-color: rgba(0,0,0,0.75);
+  background-color: rgba(35, 40, 46, 0.5);
   color: white;
   width: 500px;
   height: 200px;
   display: flex;
   flex-direction: column;
   padding: 5px;
-  border-style: solid; border-width: 0px; 
-  border-image: url(img/border.png) 77 102 80 98;
+   border-radius: 7px 7px 7px 7px;
+ -moz-border-radius: 7px 7px 7px 7px;
+ -webkit-border-radius: 7px 7px 7px 7px;
+  border: 0px solid #000000;
 }
 
 .wprompt h1{
-  font-size: 1.1em;
-}
+  font-size: 1.2em;
+  font-family: 'Roboto', sans-serif;
+  color: #FFFFFF;
+  font-family: Roboto;
+ }
 
 .wprompt textarea{
   outline: none !important;
-  background-color: rgba(0,0,0,0.75);
-  border: 1px solid rgba(255,255,255,0.30);
+  background-color: rgba(35, 40, 47, 0.39);
+  font-family: 'Roboto', sans-serif;
   flex: 1;
   color: white;
   width: 100%;
-  padding: 5px;
   resize: none;
-  box-sizing: border-box;
+  border-radius: 7px 7px 7px 7px;
+ -moz-border-radius: 7px 7px 7px 7px;
+ -webkit-border-radius: 7px 7px 7px 7px;
+  border: 0px solid #000000;
 }
 
 .wprompt textarea:focus{
@@ -145,16 +135,17 @@ Code------------------>"background-color: rgba(58, 160, 53,0.90);"
 }
 
 .wprompt .help{
-  font-size: 0.9em;
-  font-style: italic;
-  padding: 3px;
-}
+  font-size: 1.2em;
+  font-family: 'Roboto', sans-serif;
+  color: #FFFFFF;
+  font-family: Roboto;
+ }
 
 /* request manager */
 .request_manager{
   position: absolute;
   top: 50px;
-  right: 200px;
+  right: 10px;
   text-align: right;
 }
 
@@ -192,7 +183,8 @@ Code------------------>"background-color: rgba(58, 160, 53,0.90);"
   padding: 10px;
   margin-left: -400px;
   font-weight: bold;
-  font-size: 1.1em;
+  font-family: 'Roboto', sans-serif;
+  font-size: 60px;
   text-shadow: 2px 2px black;
   color: white;
   display: none;
