@@ -31,7 +31,7 @@ RegisterServerEvent("dmv:ttcharge")
 AddEventHandler("dmv:ttcharge", function()
 	local user_id = vRP.getUserId({source})
 	local player = vRP.getUserSource({user_id})
-	if vRP.tryPayment({user_id,200}) then
+	if vRP.tryPayment({user_id,1000}) then
         TriggerClientEvent('dmv:startttest',player)
 	else
 		vRPclient.notify(player,{"~r~Dinheiro insuficiente."})
@@ -42,7 +42,7 @@ RegisterServerEvent("dmv:ptcharge")
 AddEventHandler("dmv:ptcharge", function()
 	local user_id = vRP.getUserId({source})
 	local player = vRP.getUserSource({user_id})
-	if vRP.tryPayment({user_id,500}) then
+	if vRP.tryPayment({user_id,1200}) then
         TriggerClientEvent('dmv:startptest',player)
 	else
 		vRPclient.notify(player,{"~r~Dinheiro insuficiente."})
