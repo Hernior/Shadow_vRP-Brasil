@@ -173,22 +173,22 @@ local function ch_identity(player,choice)
 
                       -- update client registration
                       vRPclient.setRegistrationNumber(player,{registration})
-                      TriggerClientEvent("pNotify:SendNotification",player,{text = "Pagou <span color='red'>" ..cfg.new_identity_cost.. "R$</span>", type = "success", timeout = math.random(1000, 10000),layout = "centerLeft"})
+                      TriggerClientEvent("pNotify:SendNotification",player,{text = "Pagou <span color='red'>" ..cfg.new_identity_cost.. "R$</span>", type = "success", timeout = (3000),layout = "centerLeft"})
                     end)
                   end)
                 else
-                  TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Você não tem dinheiro suficiente</span>", type = "error", timeout = math.random(1000, 10000),layout = "centerLeft"})
+                  TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Você não tem dinheiro suficiente</span>", type = "error", timeout = (3000),layout = "centerLeft"})
                 end
               else
-                TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Valor inválido</span>", type = "error", timeout = math.random(1000, 10000),layout = "centerLeft"})
+                TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Valor inválido</span>", type = "error", timeout = (3000),layout = "centerLeft"})
               end
             end)
           else
-            TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Valor inválido</span>", type = "error", timeout = math.random(1000, 10000),layout = "centerLeft"})
+            TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Valor inválido</span>", type = "error", timeout = (3000),layout = "centerLeft"})
           end
         end)
       else
-        TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Valor inválido</span>", type = "error", timeout = math.random(1000, 10000),layout = "centerLeft"})
+        TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Valor inválido</span>", type = "error", timeout = (3000),layout = "centerLeft"})
       end
     end)
   end

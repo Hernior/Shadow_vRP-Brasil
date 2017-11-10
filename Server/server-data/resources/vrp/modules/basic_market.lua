@@ -38,15 +38,15 @@ local function build_market_menus()
                 -- payment
                 if vRP.tryPayment(user_id,amount*price) then
                   vRP.giveInventoryItem(user_id,idname,amount,true)
-                  TriggerClientEvent("pNotify:SendNotification",player,{text = "Pagou <span color='red'>" ..price.. "R$</span>", type = "success", timeout = math.random(1000, 10000),layout = "centerLeft"})
+                  TriggerClientEvent("pNotify:SendNotification",player,{text = "Pagou <span color='red'>" ..price.. "R$</span>", type = "success", timeout = (3000),layout = "centerLeft"})
                 else
-                   TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Você não tem dinheiro suficiente</span>", type = "error", timeout = math.random(1000, 10000),layout = "centerLeft"})
+                   TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Você não tem dinheiro suficiente</span>", type = "error", timeout = (3000),layout = "centerLeft"})
                 end
               else
-                TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Inventário Cheio</span>", type = "info", timeout = math.random(1000, 10000),layout = "centerLeft"})
+                TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Inventário Cheio</span>", type = "info", timeout = (3000),layout = "centerLeft"})
               end
             else
-              TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Valor inválido</span>", type = "error", timeout = math.random(1000, 10000),layout = "centerLeft"})
+              TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Valor inválido</span>", type = "error", timeout = (3000),layout = "centerLeft"})
             end
           end)
         end

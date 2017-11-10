@@ -255,11 +255,10 @@ cfg.commands = {
     action = function(p,color,msg) 
         TriggerClientEvent("pNotify:SetQueueMax",p,"global", 8)
 
-                TriggerClientEvent("pNotify:SendNotification",p,{text = "<b style='color:MediumPurple'>https://discord.gg/QHT9dVz</b> ", type = "info", timeout = math.random(1000, 10000),layout = "centerLeft", sounds = {volume = 1.0,sources = {"sound-example.wav"}}})
+                TriggerClientEvent("pNotify:SendNotification",p,{text = "<b style='color:MediumPurple'>https://discord.gg/QHT9dVz</b> ", type = "info", timeout = (3000),layout = "centerLeft", sounds = {volume = 1.0,sources = {"sound-example.wav"}}})
     end
   },  
-  --HERE GOES YOUR COMMANDS
-  
+  --HERE GOES YOUR COMMANDS  
 }
 
 return cfg

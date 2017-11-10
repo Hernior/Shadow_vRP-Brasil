@@ -55,9 +55,9 @@ for shop,tattoos in pairs(cfg.tattoos) do
           TSclient.cleanPlayer(player,{})
 		  TriggerEvent("vRP:cloakroom:update", player)
 		  vRP.setUData({user_id,"vRP:tattoos",json.encode({})})
-          TriggerClientEvent("pNotify:SendNotification",player,{text = "Pagou <span color='red'>" ..price.. "R$</span>", type = "success", timeout = math.random(1000, 10000),layout = "centerLeft"})
+          TriggerClientEvent("pNotify:SendNotification",player,{text = "Pagou <span color='red'>" ..price.. "R$</span>", type = "success", timeout = (3000),layout = "centerLeft"})
         else
-          TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Você não tem dinheiro suficiente</span>", type = "error", timeout = math.random(1000, 10000),layout = "centerLeft"})
+          TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Você não tem dinheiro suficiente</span>", type = "error", timeout = (3000),layout = "centerLeft"})
         end
 	  else
         -- get player tattoos to not rebuy
@@ -74,12 +74,12 @@ for shop,tattoos in pairs(cfg.tattoos) do
 		    -- payment
             if user_id ~= nil and vRP.tryFullPayment({user_id,price}) then
 			  vRPts.addTattoo(user_id, tattoo, shop)
-              TriggerClientEvent("pNotify:SendNotification",player,{text = "Pagou <span color='red'>" ..price.. "R$</span>", type = "success", timeout = math.random(1000, 10000),layout = "centerLeft"})
+              TriggerClientEvent("pNotify:SendNotification",player,{text = "Pagou <span color='red'>" ..price.. "R$</span>", type = "success", timeout = (3000),layout = "centerLeft"})
             else
-              TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Você não tem dinheiro suficiente</span>", type = "error", timeout = math.random(1000, 10000),layout = "centerLeft"})
+              TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Você não tem dinheiro suficiente</span>", type = "error", timeout = (3000),layout = "centerLeft"})
             end
 		  else
-            TriggerClientEvent("pNotify:SendNotification",player,{text = "Você já possui essa tatuagem", type = "error", timeout = math.random(1000, 10000),layout = "centerLeft"})
+            TriggerClientEvent("pNotify:SendNotification",player,{text = "Você já possui essa tatuagem", type = "error", timeout = (3000),layout = "centerLeft"})
 		  end
 		end})
 	  end

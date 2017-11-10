@@ -44,12 +44,12 @@ for gtype,weapons in pairs(gunshop_types) do
                 [weapon] = {ammo=amount}
               }})
 
-		  TriggerClientEvent("pNotify:SendNotification",player,{text = "Pagou <span color='red'>" ..price.. "R$</span>", type = "success", timeout = math.random(1000, 10000),layout = "centerLeft"})
+		  TriggerClientEvent("pNotify:SendNotification",player,{text = "Pagou <span color='red'>" ..price.. "R$</span>", type = "success", timeout = (3000),layout = "centerLeft"})
             else
-              TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Você não tem dinheiro suficiente</span>", type = "error", timeout = math.random(1000, 10000),layout = "centerLeft"})
+              TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Você não tem dinheiro suficiente</span>", type = "error", timeout = (3000),layout = "centerLeft"})
             end
           else
-            TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Valor inválido</span>", type = "error", timeout = math.random(1000, 10000),layout = "centerLeft"})
+            TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Valor inválido</span>", type = "error", timeout = (3000),layout = "centerLeft"})
           end
         end)
       end)
