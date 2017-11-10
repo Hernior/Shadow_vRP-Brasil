@@ -35,13 +35,6 @@ local speed_limit_freeway = 120
 local speed = kmh
 
 local DTutOpen = false
-
---[[Events]]--
-
-AddEventHandler("playerSpawned", function()
-	TriggerServerEvent('dmv:LicenseStatus')	
-end)
-
 TestDone = false
 
 RegisterNetEvent('dmv:CheckLicStatus')
@@ -629,6 +622,7 @@ RegisterNUICallback('kick', function(data, cb)
   cb('ok')
   DrawMissionText2("~r~Você falhou no teste, você pode tentar novamente outro dia", 2000)	
   onTtest = false
+  theorylock = false
 end)
 
 Citizen.CreateThread(function()
