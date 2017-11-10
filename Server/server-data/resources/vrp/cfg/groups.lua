@@ -192,23 +192,11 @@ cfg.groups = {
 	"-player.blips",
 	"mugger.mug"
   },
-  ["Jornalista"] = {
-    _config = { gtype = "job" },
-	"player.paycheck",
-	"globonews.garagem"
-  },
-  ["Editor Chefe"] = {
-    _config = { gtype = "job" },
-	"diretorchefe.paycheck",
-	"globonews.garagem"
-  },
-
   ["Advogado"] = {
     _config = { gtype = "job" },
 	"advogado.oab",
 	"globonews.garagem"
-  },
-  
+  },  
   ["Transportador de Valores"] = {
     _config = { gtype = "job",
 	onspawn = function(player) vRPclient.notify(player,{"Você é um piloto de carro forte."}) end
@@ -257,12 +245,7 @@ cfg.selectors = {
 	"Traficante de Maconha",
 	"Traficante de Cocaina",	
 	"Traficante de Armas"
-  }
-  --[[["Jornal SP"] = {
-    _config = {x = -77.134468078613, y = -802.86267089844, z = 243.40579223633, blipid = 0, blipcolor = 0},
-	"Jornalista",
-	"Desempregado"
-  },--]]  
+  } 
 }
 
 return cfg
