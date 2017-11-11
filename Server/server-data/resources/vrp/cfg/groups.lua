@@ -99,7 +99,7 @@ cfg.groups = {
     "police.fine",
     "police.announce",
 	"police.askid",
-	"pm.paycheck",
+	"police.paycheck",
 	"mission.police.transfer",
     "mission.police.patrol",
 	"police.weapons",

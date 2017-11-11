@@ -17,7 +17,7 @@ cfg.bill_title_picture = "Compania de Seguro" -- define title for bill notificat
 cfg.bill_picture = "CHAR_MP_MORS_MUTUAL" -- define bill notification picture want's to display
 
 cfg.paycheck = { -- ["permission"] = paycheck
-  ["pm.paycheck"] = 1600,
+  ["police.paycheck"] = 1600,
 --[""] = 0,
   ["emergency.paycheck"] = 2000,
   ["taxi.paycheck"] = 800,
@@ -28,7 +28,7 @@ cfg.paycheck = { -- ["permission"] = paycheck
 }
 
 cfg.bill = { -- ["permission"] = withdrawal
-  ["pm.paycheck"] = 450,
+  ["police.paycheck"] = 450,
 --[""] = 0,
   ["emergency.paycheck"] = 150,
   ["taxi.paycheck"] = 125,
