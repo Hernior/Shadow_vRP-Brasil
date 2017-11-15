@@ -195,7 +195,6 @@ cfg.groups = {
   ["Advogado"] = {
     _config = { gtype = "job" },
 	"advogado.oab",
-	"globonews.garagem"
   },  
   ["Transportador de Valores"] = {
     _config = { gtype = "job",
