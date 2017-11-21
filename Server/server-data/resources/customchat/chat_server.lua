@@ -1,3 +1,12 @@
+local Tunnel = module("vrp", "lib/Tunnel")
+local Proxy = module("vrp", "lib/Proxy")
+
+vRPcc = {}
+vRP = Proxy.getInterface("vRP")
+Proxy.addInterface("customchat",vRPcc)
+CCclient = Tunnel.getInterface("customchat","customchat")
+Tunnel.bindInterface("customchat",vRPcc )
+
 RegisterServerEvent('chatCommandEntered')
 RegisterServerEvent('chatMessageEntered')
 
@@ -12,6 +21,13 @@ function stringSplit(inputstr, sep)
         i = i + 1
     end
     return t
+end
+
+function vRPcc.getMyRPidentity()
+   local user_id = vRP.getUserId({source})
+   vRP.getUserIdentity({user_id,function(identity)
+        return user_id, identity
+    end})
 end
 
 -- main event
@@ -45,24 +61,33 @@ AddEventHandler('chatMessageEntered', function(name, color, message)
         end
 		
         if cmd == "/g" then
-			if msg ~= nil then
-				TriggerClientEvent("sendGlobalMessage", -1, source, name, tostring(msg))
-			end
-        	CancelEvent()
+            if msg ~= nil then
+              local user_id = vRP.getUserId({source})
+              vRP.getUserIdentity({user_id,function(identity)
+                TriggerClientEvent("sendGlobalMessage", -1, source, name, tostring(msg),user_id,identity)
+              end})
+            end
+            CancelEvent()
         end
 
         if cmd == "/twitter" then
-			if msg ~= nil then
-				TriggerClientEvent("sendTwitterMessage", -1, source, name, tostring(msg))
-			end
-        	CancelEvent()
+            if msg ~= nil then
+              local user_id = vRP.getUserId({source})
+              vRP.getUserIdentity({user_id,function(identity)
+                TriggerClientEvent("sendTwitterMessage", -1, source, name, tostring(msg),user_id,identity)
+              end})
+            end
+            CancelEvent()
         end
 		
         if cmd == "/ooc" then
-			if msg ~= nil then
-				TriggerClientEvent("sendOOCMessage", -1, source, name, tostring(msg))
-			end
-        	CancelEvent()
+            if msg ~= nil then
+              local user_id = vRP.getUserId({source})
+              vRP.getUserIdentity({user_id,function(identity)
+                TriggerClientEvent("sendOOCMessage", -1, source, name, tostring(msg),user_id,identity)
+              end})
+            end
+            CancelEvent()
         end
 	else
 		if not WasEventCanceled() then
@@ -100,11 +125,10 @@ AddEventHandler('rconCommand', function(commandName, args)
     end
 end)
 
---[[ player join messages -- deactivated by default, uncomment to activate
-AddEventHandler('playerActivated', function()
-    TriggerClientEvent('chatMessage', -1, '', { 0, 0, 0 }, '^2* ' .. GetPlayerName(source) .. ' joined.')
+--player join messages -- deactivated by default, uncomment to activate
+AddEventHandler("vRP:playerSpawn", function(user_id, source, first_spawn)
+    --player join messages -- deactivated by default, uncomment to activate
+    vRP.getUserIdentity({user_id,function(identity)
+        TriggerClientEvent('chatMessage', -1, 'SERVER', { 0, 255, 0, 0.3 }, '' .. identity.name ..' ' .. identity.firstname .. ' has entered the city.')
+    end})
 end)
-
-AddEventHandler('playerDropped', function(reason)
-    TriggerClientEvent('chatMessage', -1, '', { 0, 0, 0 }, '^2* ' .. GetPlayerName(source) ..' left (' .. reason .. ')')
-end)]]

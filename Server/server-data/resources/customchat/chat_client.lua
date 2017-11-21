@@ -1,3 +1,5 @@
+CCserver = Tunnel.getInterface("customchat","customchat")
+
 local chatInputActive = false
 local chatInputActivating = false
 
@@ -13,23 +15,23 @@ AddEventHandler("playerSpawned",function()
 end)
 -- proximity chat
 RegisterNetEvent('sendGlobalMessage')
-AddEventHandler('sendGlobalMessage', function(id, name, message)
-	TriggerEvent('chatMessage', "[G]"..name, {255, 0, 0}, message)
+AddEventHandler('sendGlobalMessage', function(id, name, message,user_id,identity)
+    TriggerEvent('chatMessage', "[Global] (".. identity.name .. " " .. identity.firstname ..")", {255, 0, 0}, message)
 end)
 
 RegisterNetEvent('sendTwitterMessage')
-AddEventHandler('sendTwitterMessage', function(id, name, message)
-	TriggerEvent('chatMessage', "[Twitter]"..name, {0, 170, 255}, message)
+AddEventHandler('sendTwitterMessage', function(id, name, message,user_id,identity)
+	TriggerEvent('chatMessage', "[Twitter] (".. identity.name .. " " .. identity.firstname ..")", {0, 170, 255}, message)
 end)
 
 RegisterNetEvent('sendOOCMessage')
-AddEventHandler('sendOOCMessage', function(id, name, message)
+AddEventHandler('sendOOCMessage', function(id, name, message,user_id,identity)
 	local monid = PlayerId()
 	local sonid = GetPlayerFromServerId(id)
 	if sonid == monid then
-		TriggerEvent('chatMessage', "[OOC]"..name, {128, 128, 128}, message)
-	elseif GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(monid)), GetEntityCoords(GetPlayerPed(sonid)), true) < 19.999 then
-		TriggerEvent('chatMessage', "[OOC]"..name, {128, 128, 128}, message)
+		TriggerEvent('chatMessage', "[OOC] ".. identity.name .. " " .. identity.firstname .. " ["..user_id.."] ", {128, 128, 128}, message)
+	elseif GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(monid)), GetEntityCoords(GetPlayerPed(sonid)), true) < 29.999 then
+		TriggerEvent('chatMessage', "[OOC] ".. identity.name .. " " .. identity.firstname .. " ["..user_id.."] ", {128, 128, 128}, message)
 	end
 end)
 
