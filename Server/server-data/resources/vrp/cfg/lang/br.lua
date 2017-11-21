@@ -136,7 +136,7 @@ local lang = {
     }
   },
   police = {
-    title = "💎Ações do Jogador",
+    title = "👮 Policia",
     wanted = "Nivel de Procurado {1}",
     not_handcuffed = "~r~Não Algemado",
     cloakroom = {
