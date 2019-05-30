@@ -1010,7 +1010,7 @@ local lsc = {
 		title = "CATEGORIES", 
 		name = "repair",
 		buttons = { 
-			{name = "Repair vehicle", description = "Full body repair and engine service.", costs = 100, centre = 0, font = 0, scale = 0.4}
+			{name = "Consertar veículo", description = "Reparação completa do veículo.", costs = 100, centre = 0, font = 0, scale = 0.4}
 			
 		}
 	},
@@ -1019,11 +1019,11 @@ local lsc = {
 		name = "armor",
 		buttons = { 
 			{name = "None",modtype = 16, mod = -1,costs = 10, description = "", centre = 0, font = 0, scale = 0.4},
-			{name = "Armor Upgrade 20%",modtype = 16, mod = false, costs = 200, description = "", centre = 0, font = 0, scale = 0.4},
-			{name = "Armor Upgrade 40%",modtype = 16, mod = 1, costs = 500, description = "", centre = 0, font = 0, scale = 0.4},
-			{name = "Armor Upgrade 60%",modtype = 16, mod = 2, costs = 1100, description = "", centre = 0, font = 0, scale = 0.4},
-			{name = "Armor Upgrade 80%",modtype = 16, mod = 3, costs = 2500, description = "", centre = 0, font = 0, scale = 0.4},
-			{name = "Armor Upgrade 100%",modtype = 16, mod = 4, costs = 5000, description = "", centre = 0, font = 0, scale = 0.4}
+			{name = "20% blindado",modtype = 16, mod = false, costs = 200, description = "", centre = 0, font = 0, scale = 0.4},
+			{name = "40% blindado",modtype = 16, mod = 1, costs = 500, description = "", centre = 0, font = 0, scale = 0.4},
+			{name = "60% blindado",modtype = 16, mod = 2, costs = 1100, description = "", centre = 0, font = 0, scale = 0.4},
+			{name = "80% blindado",modtype = 16, mod = 3, costs = 2500, description = "", centre = 0, font = 0, scale = 0.4},
+			{name = "100% blindado",modtype = 16, mod = 4, costs = 5000, description = "", centre = 0, font = 0, scale = 0.4}
 			
 		}
 	},
@@ -1031,10 +1031,10 @@ local lsc = {
 		title = "brakes", 
 		name = "brakes",
 		buttons = { 
-			{name = "Stock Brakes",modtype = 12, mod = -1, costs = 30, description = "", centre = 0, font = 0, scale = 0.4},
-			{name = "Street Brakes",modtype = 12, mod = false, costs = 110, description = "", centre = 0, font = 0, scale = 0.4},
-			{name = "Sport Brakes",modtype = 12, mod = 1, costs = 150, description = "", centre = 0, font = 0, scale = 0.4},
-			{name = "Race Brakes",modtype = 12, mod = 2, costs = 190, description = "", centre = 0, font = 0, scale = 0.4}
+			{name = "Freios padrão",modtype = 12, mod = -1, costs = 30, description = "", centre = 0, font = 0, scale = 0.4},
+			{name = "Freios de rua",modtype = 12, mod = false, costs = 110, description = "", centre = 0, font = 0, scale = 0.4},
+			{name = "Freios esportivos",modtype = 12, mod = 1, costs = 150, description = "", centre = 0, font = 0, scale = 0.4},
+			{name = "Freios de corrida",modtype = 12, mod = 2, costs = 190, description = "", centre = 0, font = 0, scale = 0.4}
 			
 		}
 	},
@@ -1042,17 +1042,17 @@ local lsc = {
 		title = "engine tunes", 
 		name = "engine",
 		buttons = { 
-			{name = "EMS Upgrade, Level 1",modtype = 11, mod = -1, costs = 100, description = "", centre = 0, font = 0, scale = 0.4},
-			{name = "EMS Upgrade, Level 2",modtype = 11, mod = false, costs = 210, description = "", centre = 0, font = 0, scale = 0.4},
-			{name = "EMS Upgrade, Level 3",modtype = 11, mod = 1, costs = 540, description = "", centre = 0, font = 0, scale = 0.4},
-			{name = "EMS Upgrade, Level 4",modtype = 11, mod = 2, costs = 1350, description = "", centre = 0, font = 0, scale = 0.4}
+			{name = "Motor 1.0",modtype = 11, mod = -1, costs = 100, description = "", centre = 0, font = 0, scale = 0.4},
+			{name = "Motor 1.4",modtype = 11, mod = false, costs = 210, description = "", centre = 0, font = 0, scale = 0.4},
+			{name = "Motor 1.8",modtype = 11, mod = 1, costs = 540, description = "", centre = 0, font = 0, scale = 0.4},
+			{name = "Motor 2.0",modtype = 11, mod = 2, costs = 1350, description = "", centre = 0, font = 0, scale = 0.4}
 		}
 	},
 	["horn"] = { 
 			title = "horns", 
 			name = "horn",
 			buttons = { 
-				{name = "Stock Horn",modtype = 14, mod = -1,costs = 15, description = "", centre = 0, font = 0, scale = 0.4},
+				{name = "Bozina padrão",modtype = 14, mod = -1,costs = 15, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Truck Horn",modtype = 14, mod = false,costs = 50, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Police Horn",modtype = 14, mod = 1,costs = 120, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Clown Horn",modtype = 14, mod = 2,costs = 60, description = "", centre = 0, font = 0, scale = 0.4},
